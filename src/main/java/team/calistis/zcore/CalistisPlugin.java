@@ -26,10 +26,13 @@ public abstract class CalistisPlugin extends PluginBase {
   }
 
   public abstract void onPluginEnable();
+
   public abstract void onPluginDisable();
+
   public abstract void onPluginLoad();
 
   public abstract void onConfigurationLoad();
+
   public abstract void onConfigurationSave();
 
   public abstract void onManagerRegistry();

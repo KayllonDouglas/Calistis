@@ -1,14 +1,15 @@
 package team.calistis.faction;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import team.calistis.Calistis;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FactionManager {
 
   private final Calistis calistis;
-  private final Set<Faction> allFactions = new HashSet<>();
+
+  private final List<Faction> allFactions = new ArrayList<>();
 
   public FactionManager(Calistis calistis) {
     this.calistis = calistis;
@@ -16,28 +17,13 @@ public class FactionManager {
 
   public Faction getFaction(String name) {
     return this.allFactions
-        .stream()
-        .filter(faction -> faction.getName().equals(name))
-        .findAny().orElse(null);
+            .stream()
+            .filter(f -> f.getName().equals(name))
+            .findAny()
+            .orElse(null);
   }
 
-  public String getTag(String name) {
-    return this.getFaction(name).getTag();
-  }
-
-  public FactionIntegrant getLeader(String name) {
-    return this.getFaction(name).getLeader();
-  }
- 
-  public double getBalance(String name) {
-    return this.getFaction(name).getBalance();
-  }
-
-  public int getPower(String name) {
-    return this.getFaction(name).getPower();
-  }
-
-  public Set<Faction> getAllFactions() {
+  public List<Faction> getAllFactions() {
     return allFactions;
   }
 

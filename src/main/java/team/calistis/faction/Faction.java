@@ -4,22 +4,31 @@ import java.util.List;
 
 public class Faction {
 
-  private final String name, tag;
-  private final FactionIntegrant leader;
-  private final List<FactionIntegrant> members;
-  private final List<FactionIntegrant> officers;
+  public static final int MAX_FACTION_NAME_LENGTH = 10;
+  public static final int MAX_FACTION_TAG_LENGTH = 3;
+  public static final int MAX_FACTION_MEMBERS_LENGTH = 30;
+  public static final int MAX_FACTION_OFFICERS_LENGTH = 3;
+  public static final int MAX_FACTION_MONEY_LENGTH = 999999999;
+  public static final int MAX_FACTION_POWER_LENGTH = 100;
 
-  private final double balance;
+  private final String name;
+  private final String tag;
+  private final FactionMember leader;
+  private final List<FactionMember> members;
+  private final List<FactionMember> officers;
+
+  private final double money;
   private final int power;
 
-  public Faction(String name, String tag, FactionIntegrant leader, List<FactionIntegrant> members,
-      List<FactionIntegrant> officers, double balance, int power) {
+  public Faction(String name, String tag, FactionMember leader,
+                 List<FactionMember> members, List<FactionMember> officers,
+                 double money, int power) {
     this.name = name;
     this.tag = tag;
     this.leader = leader;
     this.members = members;
     this.officers = officers;
-    this.balance = balance;
+    this.money = money;
     this.power = power;
   }
 
@@ -31,20 +40,20 @@ public class Faction {
     return tag;
   }
 
-  public FactionIntegrant getLeader() {
+  public FactionMember getLeader() {
     return leader;
   }
 
-  public List<FactionIntegrant> getMembers() {
+  public List<FactionMember> getMembers() {
     return members;
   }
 
-  public List<FactionIntegrant> getOfficers() {
+  public List<FactionMember> getOfficers() {
     return officers;
   }
 
-  public double getBalance() {
-    return balance;
+  public double getMoney() {
+    return money;
   }
 
   public int getPower() {

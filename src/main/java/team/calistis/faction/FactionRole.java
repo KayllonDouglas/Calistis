@@ -4,6 +4,6 @@ public enum FactionRole {
 
   MEMBER,
   OFFICER,
-  LEADER;
+  LEADER
 
 }
