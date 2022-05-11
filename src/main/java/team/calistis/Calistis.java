@@ -1,7 +1,5 @@
 package team.calistis;
 
-import cn.nukkit.command.PluginCommand;
-import team.calistis.command.core.CalistisCommandManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
@@ -23,7 +21,6 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onManagerRegistry() {
-    ((PluginCommand<?>) this.getCommand("calistis")).setExecutor(new CalistisCommandManager(this));
   }
 
   @Override

@@ -1,4 +1,6 @@
-team\calistis\faction\FactionManager$1.class
-team\calistis\Core.class
-team\calistis\faction\Faction.class
-team\calistis\faction\FactionManager.class
+team/calistis/command/core/base/AboutCommand.class
+team/calistis/Calistis.class
+team/calistis/command/core/CalistisCommandManager.class
+team/calistis/command/core/base/GamemodeCommand.class
+team/calistis/zcore/CalistisPlugin.class
+team/calistis/command/core/CalistisCommand.class

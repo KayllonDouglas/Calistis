@@ -1,3 +1,6 @@
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\Core.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\faction\Faction.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\faction\FactionManager.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/command/core/base/AboutCommand.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/command/core/CalistisCommandManager.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/zcore/CalistisPlugin.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/command/core/base/GamemodeCommand.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/command/core/CalistisCommand.java

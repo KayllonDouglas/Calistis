@@ -67,7 +67,7 @@
       <artifactId>nukkit</artifactId>
       <version>1.0-SNAPSHOT</version>
       <scope>system</scope>
-      <systemPath>${project.basedir}/lib/Nukkit0.15.10.jar</systemPath>
+      <systemPath>${project.basedir}/lib/Nukkit.jar</systemPath>
     </dependency>
   </dependencies>
   <properties>

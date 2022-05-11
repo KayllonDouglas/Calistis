@@ -5,5 +5,5 @@ main: team.calistis.Calistis
 author: Constanze
 
 commands:
-  calistis:
+  core:
     description: Main core command

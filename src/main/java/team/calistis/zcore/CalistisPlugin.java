@@ -4,6 +4,8 @@ import cn.nukkit.plugin.PluginBase;
 
 public abstract class CalistisPlugin extends PluginBase {
 
+  private static CalistisPlugin instance;
+
   @Override
   public void onLoad() {
     this.onPluginLoad();
@@ -11,6 +13,7 @@ public abstract class CalistisPlugin extends PluginBase {
 
   @Override
   public void onEnable() {
+    instance = this;
     this.onPluginEnable();
     this.onManagerRegistry();
     this.onConfigurationLoad();
@@ -30,4 +33,9 @@ public abstract class CalistisPlugin extends PluginBase {
   public abstract void onConfigurationSave();
 
   public abstract void onManagerRegistry();
+
+  public static CalistisPlugin getInstance() {
+    return instance;
+  }
+
 }
