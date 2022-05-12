@@ -14,6 +14,7 @@ public abstract class CalistisPlugin extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
+    this.getDataFolder().mkdir();
     this.onPluginEnable();
     this.onManagerRegistry();
     this.onConfigurationLoad();

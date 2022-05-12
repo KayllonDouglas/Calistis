@@ -1,8 +1,11 @@
 package team.calistis;
 
+import team.calistis.faction.FactionManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
+
+  private FactionManager factionManager;
 
   @Override
   public void onPluginLoad() {
@@ -21,15 +24,21 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onManagerRegistry() {
+    this.factionManager = new FactionManager(this);
   }
 
   @Override
   public void onConfigurationLoad() {
+    this.factionManager.load();
   }
 
   @Override
   public void onConfigurationSave() {
+    this.factionManager.save();
+  }
 
+  public FactionManager getFactionManager() {
+    return factionManager;
   }
 
 }
