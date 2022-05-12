@@ -3,7 +3,3 @@ version: "1.0.0"
 api: ["1.0.0"]
 main: team.calistis.Calistis
 author: Constanze
-
-commands:
-  core:
-    description: Main core command

@@ -1,6 +1,8 @@
-team/calistis/Calistis.class
-team/calistis/faction/Faction.class
-team/calistis/faction/FactionMember.class
-team/calistis/zcore/CalistisPlugin.class
-team/calistis/faction/FactionRole.class
-team/calistis/faction/FactionManager.class
+team\calistis\CalistisListener.class
+team\calistis\command\CalistisCommand.class
+team\calistis\manager\components\Rank.class
+team\calistis\zcore\CalistisPlugin.class
+team\calistis\manager\command\RankCommandManager.class
+team\calistis\Calistis.class
+team\calistis\manager\CalistisManager.class
+team\calistis\command\rank\SetRankCommand.class

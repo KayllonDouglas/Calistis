@@ -1,6 +1,8 @@
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/faction/FactionManager.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/zcore/CalistisPlugin.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/faction/FactionRole.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/faction/FactionMember.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/faction/Faction.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\CalistisListener.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\manager\CalistisManager.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\manager\command\RankCommandManager.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\command\CalistisCommand.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\zcore\CalistisPlugin.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\Calistis.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\manager\components\Rank.java
+C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\command\rank\SetRankCommand.java

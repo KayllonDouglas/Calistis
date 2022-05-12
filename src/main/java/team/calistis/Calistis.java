@@ -1,11 +1,13 @@
 package team.calistis;
 
-import team.calistis.faction.FactionManager;
+import team.calistis.manager.CalistisManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
 
-  private FactionManager factionManager;
+  private static Calistis instance;
+
+  private CalistisManager calistisManager;
 
   @Override
   public void onPluginLoad() {
@@ -14,6 +16,8 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onPluginEnable() {
+    instance = this;
+    this.getServer().getPluginManager().registerEvents(new CalistisListener(this), this);
     this.getLogger().info("§aCalistisCore enabled successfully.");
   }
 
@@ -24,21 +28,23 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onManagerRegistry() {
-    this.factionManager = new FactionManager(this);
+    this.calistisManager = new CalistisManager(this);
   }
 
   @Override
   public void onConfigurationLoad() {
-    this.factionManager.load();
   }
 
   @Override
   public void onConfigurationSave() {
-    this.factionManager.save();
   }
 
-  public FactionManager getFactionManager() {
-    return factionManager;
+  public CalistisManager getCalistisManager() {
+    return calistisManager;
+  }
+
+  public static Calistis getInstance() {
+    return instance;
   }
 
 }
