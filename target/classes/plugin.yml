@@ -3,3 +3,7 @@ version: "1.0.0"
 api: ["1.0.0"]
 main: team.calistis.Calistis
 author: Constanze
+
+commands:
+  f:
+    description: Default factions command.

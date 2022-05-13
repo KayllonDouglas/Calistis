@@ -1,7 +1,6 @@
 package team.calistis;
 
-import cn.nukkit.command.PluginCommand;
-import team.calistis.manager.command.FactionCommandManager;
+import team.calistis.manager.CalistisManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
@@ -32,7 +31,6 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onCommandRegistry() {
-    ((PluginCommand<?>) this.getCommand("f")).setExecutor(new FactionCommandManager(this));
   }
 
   @Override
