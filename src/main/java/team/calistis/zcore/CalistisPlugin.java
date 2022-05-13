@@ -13,6 +13,7 @@ public abstract class CalistisPlugin extends PluginBase {
   public void onEnable() {
     this.getDataFolder().mkdir();
     this.onPluginEnable();
+    this.onCommandRegistry();
     this.onManagerRegistry();
     this.onConfigurationLoad();
   }
@@ -35,4 +36,5 @@ public abstract class CalistisPlugin extends PluginBase {
 
   public abstract void onManagerRegistry();
 
+  public abstract void onCommandRegistry();
 }

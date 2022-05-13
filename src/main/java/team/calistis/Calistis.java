@@ -1,10 +1,13 @@
 package team.calistis;
 
+import cn.nukkit.command.PluginCommand;
+import team.calistis.manager.command.FactionCommandManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
 
   private static Calistis instance;
+  private CalistisManager calistisManager;
 
   @Override
   public void onPluginLoad() {
@@ -24,6 +27,12 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onManagerRegistry() {
+    this.calistisManager = new CalistisManager(this);
+  }
+
+  @Override
+  public void onCommandRegistry() {
+    ((PluginCommand<?>) this.getCommand("f")).setExecutor(new FactionCommandManager(this));
   }
 
   @Override
@@ -36,6 +45,10 @@ public class Calistis extends CalistisPlugin {
 
   public static Calistis getInstance() {
     return instance;
+  }
+
+  public CalistisManager getCalistisManager() {
+    return calistisManager;
   }
 
 }

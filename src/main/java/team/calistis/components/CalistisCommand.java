@@ -1,4 +1,4 @@
-package team.calistis.command;
+package team.calistis.components;
 
 import cn.nukkit.Player;
 
