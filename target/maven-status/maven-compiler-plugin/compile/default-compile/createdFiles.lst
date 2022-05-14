@@ -1,3 +1,6 @@
-team\calistis\Calistis.class
-team\calistis\CalistisPlayer.class
+team\calistis\manager\PlayerManager$1.class
+team\calistis\zcore\CalistisPlugin.class
 team\calistis\CalistisManager.class
+team\calistis\player\CalistisPlayer.class
+team\calistis\Calistis.class
+team\calistis\manager\PlayerManager.class

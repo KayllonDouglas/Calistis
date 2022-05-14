@@ -1,27 +1,25 @@
 package team.calistis;
 
-import team.calistis.manager.CalistisManager;
+import cn.nukkit.utils.LogLevel;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
 
-  private static Calistis instance;
   private CalistisManager calistisManager;
 
   @Override
   public void onPluginLoad() {
-    this.getLogger().info("§aCalistisCore loaded successfully.");
+
   }
 
   @Override
   public void onPluginEnable() {
-    instance = this;
-    this.getLogger().info("§aCalistisCore enabled successfully.");
+    this.getLogger().log(LogLevel.INFO, "§aCalistis is now enabled.");
   }
 
   @Override
   public void onPluginDisable() {
-    this.getLogger().info("§aCalistisCore disabled successfully.");
+    this.getLogger().log(LogLevel.INFO, "§cCalistis is now disabled.");
   }
 
   @Override
@@ -30,19 +28,18 @@ public class Calistis extends CalistisPlugin {
   }
 
   @Override
-  public void onCommandRegistry() {
+  public void onListenerRegistry() {
+
   }
 
   @Override
-  public void onConfigurationLoad() {
+  protected void onConfigurationLoad() {
+    this.calistisManager.getPlayerManager().load();
   }
 
   @Override
-  public void onConfigurationSave() {
-  }
-
-  public static Calistis getInstance() {
-    return instance;
+  protected void onConfigurationSave() {
+    this.calistisManager.getPlayerManager().save();
   }
 
   public CalistisManager getCalistisManager() {
