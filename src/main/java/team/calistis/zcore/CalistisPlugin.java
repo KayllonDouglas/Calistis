@@ -33,7 +33,7 @@ public abstract class CalistisPlugin extends PluginBase {
   public abstract void onPluginDisable();
   public abstract void onManagerRegistry();
   public abstract void onListenerRegistry();
-  protected abstract void onConfigurationLoad();
-  protected abstract void onConfigurationSave();
+  public abstract void onConfigurationLoad();
+  public abstract void onConfigurationSave();
 
 }

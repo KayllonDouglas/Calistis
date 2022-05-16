@@ -1,5 +1,9 @@
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\CalistisManager.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\player\CalistisPlayer.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\manager\PlayerManager.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\zcore\CalistisPlugin.java
-C:\Users\Usuário\IdeaProjects\CalistisCore\src\main\java\team\calistis\Calistis.java
+/root/projects/CalistisCore/src/main/java/team/calistis/api/CalistisPlayerApi.java
+/root/projects/CalistisCore/src/main/java/team/calistis/command/CalistisCommand.java
+/root/projects/CalistisCore/src/main/java/team/calistis/command/account/RegisterAccountCommand.java
+/root/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
+/root/projects/CalistisCore/src/main/java/team/calistis/zcore/CalistisPlugin.java
+/root/projects/CalistisCore/src/main/java/team/calistis/CalistisListener.java
+/root/projects/CalistisCore/src/main/java/team/calistis/player/CalistisPlayer.java
+/root/projects/CalistisCore/src/main/java/team/calistis/command/AccountCommandManager.java
+/root/projects/CalistisCore/src/main/java/team/calistis/command/account/AuthenticateAccountCommand.java

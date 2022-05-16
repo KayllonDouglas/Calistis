@@ -1,15 +1,16 @@
 package team.calistis.player;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
 public class CalistisPlayer {
 
-  private final String password;
-  private final double balance;
-  private final Date lastLogin;
+  private String password;
+  private double balance;
+  private Date lastLogin;
 
 }

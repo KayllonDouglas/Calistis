@@ -1,19 +1,28 @@
 package team.calistis;
 
+import java.io.File;
+
+import cn.nukkit.command.PluginCommand;
+import cn.nukkit.utils.Config;
 import cn.nukkit.utils.LogLevel;
+import team.calistis.api.CalistisPlayerApi;
+import team.calistis.command.AccountCommandManager;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
 
-  private CalistisManager calistisManager;
+  private static Calistis instance;
+  private static Config calistisPlayerConfiguration;
 
   @Override
   public void onPluginLoad() {
-
   }
 
   @Override
   public void onPluginEnable() {
+    instance = this;
+    ((PluginCommand<?>) this.getCommand("conta")).setExecutor(new AccountCommandManager());
+    calistisPlayerConfiguration = new Config(new File(this.getDataFolder(), "PlayersRepository.json"), Config.JSON);
     this.getLogger().log(LogLevel.INFO, "§aCalistis is now enabled.");
   }
 
@@ -24,26 +33,29 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public void onManagerRegistry() {
-    this.calistisManager = new CalistisManager(this);
   }
 
   @Override
   public void onListenerRegistry() {
-
+    this.getServer().getPluginManager().registerEvents(new CalistisListener(), this);
   }
 
   @Override
-  protected void onConfigurationLoad() {
-    this.calistisManager.getPlayerManager().load();
+  public void onConfigurationLoad() {
+    CalistisPlayerApi.load();
   }
 
   @Override
-  protected void onConfigurationSave() {
-    this.calistisManager.getPlayerManager().save();
+  public void onConfigurationSave() {
+    CalistisPlayerApi.save();
   }
 
-  public CalistisManager getCalistisManager() {
-    return calistisManager;
+  public static Calistis getInstance() {
+    return instance;
+  }
+
+  public static Config getCalistisPlayerConfiguration() {
+    return calistisPlayerConfiguration;
   }
 
 }
