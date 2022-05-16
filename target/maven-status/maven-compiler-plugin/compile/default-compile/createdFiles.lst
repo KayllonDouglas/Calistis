@@ -1,10 +1,11 @@
-team/calistis/api/CalistisPlayerApi.class
-team/calistis/player/CalistisPlayer.class
+team/calistis/system/PlayerSystem.class
 team/calistis/command/AccountCommandManager.class
 team/calistis/Calistis.class
 team/calistis/CalistisListener.class
+team/calistis/system/PlayerSystem$1.class
+team/calistis/CalistisPlayer.class
+team/calistis/system/BroadcasterSystem.class
 team/calistis/command/account/AuthenticateAccountCommand.class
 team/calistis/command/CalistisCommand.class
-team/calistis/api/CalistisPlayerApi$1.class
-team/calistis/zcore/CalistisPlugin.class
 team/calistis/command/account/RegisterAccountCommand.class
+team/calistis/configuration/BroadcasterConfiguration.class

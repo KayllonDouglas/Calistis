@@ -3,7 +3,7 @@ package team.calistis.command.account;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import cn.nukkit.Player;
-import team.calistis.api.CalistisPlayerApi;
+import team.calistis.system.PlayerSystem;
 import team.calistis.command.CalistisCommand;
 
 public class AuthenticateAccountCommand implements CalistisCommand {
@@ -30,11 +30,11 @@ public class AuthenticateAccountCommand implements CalistisCommand {
 			return;
 		}
 		String password = args[1];
-		if (!CalistisPlayerApi.getCalistisPlayerPassword(player).equals(DigestUtils.sha256Hex(password))) {
+		if (!PlayerSystem.getAccountPassword(player).equals(DigestUtils.sha256Hex(password))) {
 			player.sendMessage(" \n§c» §7A senha informada esta incorreta, §cdigite-a corretamente§7.\n");
 			return;
 		}
-		CalistisPlayerApi.authenticateCalistisPlayer(player);
+		PlayerSystem.authenticateAccount(player);
 		player.sendMessage(" \n§a» §7Você logou com sucesso, tenha um bom jogo.\n");
 	}
   

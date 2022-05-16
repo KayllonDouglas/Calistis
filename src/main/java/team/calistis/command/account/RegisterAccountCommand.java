@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import cn.nukkit.Player;
-import team.calistis.api.CalistisPlayerApi;
 import team.calistis.command.CalistisCommand;
+import team.calistis.system.PlayerSystem;
 
 public class RegisterAccountCommand implements CalistisCommand {
 
@@ -57,14 +57,14 @@ public class RegisterAccountCommand implements CalistisCommand {
 			player.sendMessage(" \n§6» §7A senha informada deve conter pelomenos 1 caracter especial.\n");
 			return;
 		}
-		if (Optional.ofNullable(CalistisPlayerApi.getCalistisPlayerPassword(player)).isPresent()) {
+		if (Optional.ofNullable(PlayerSystem.getAccountPassword(player)).isPresent()) {
 			player.sendMessage(" \n§c» §7Você ja tem uma senha registrada no banco de dados do servidor.\n");
 			return;
 		}
-		if (Optional.ofNullable(CalistisPlayerApi.getCalistisPlayerPassword(player)).isEmpty()) {
+		if (Optional.ofNullable(PlayerSystem.getAccountPassword(player)).isEmpty()) {
 			player.sendMessage(" \n§6» §7Registrando sua senha no banco de dados, por favor aguarde.\n");
-			CalistisPlayerApi.setCalistisPlayerPassword(player, DigestUtils.sha256Hex(password));
-			CalistisPlayerApi.authenticateCalistisPlayer(player);
+			PlayerSystem.setAccountPassword(player, DigestUtils.sha256Hex(password));
+			PlayerSystem.authenticateAccount(player);
 			player.sendMessage(" \n§a» §7A sua senha foi registrada com §asucesso§7, tenha um bom jogo.\n");
 			return;
 		}
