@@ -14,6 +14,11 @@ import team.calistis.system.PlayerSystem;
 public class CalistisListener implements Listener {
 
   @EventHandler
+  public void onPlayerJoin(PlayerJoinEvent event) {
+    
+  }
+
+  @EventHandler
   public void onJoin(PlayerJoinEvent event) {
     event.setJoinMessage(" \n§a» §7O(a) jogador(a) §a" + event.getPlayer().getNameTag() + " §7 logou no servidor.\n");
     if (Optional.ofNullable(PlayerSystem.getAccount(event.getPlayer())).isEmpty()) {
