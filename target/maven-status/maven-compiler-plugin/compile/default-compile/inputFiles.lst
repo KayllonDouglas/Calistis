@@ -1,10 +1,4 @@
-/root/projects/CalistisCore/src/main/java/team/calistis/system/BroadcasterSystem.java
-/root/projects/CalistisCore/src/main/java/team/calistis/CalistisPlayer.java
-/root/projects/CalistisCore/src/main/java/team/calistis/configuration/BroadcasterConfiguration.java
-/root/projects/CalistisCore/src/main/java/team/calistis/command/CalistisCommand.java
-/root/projects/CalistisCore/src/main/java/team/calistis/command/account/RegisterAccountCommand.java
-/root/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
-/root/projects/CalistisCore/src/main/java/team/calistis/CalistisListener.java
-/root/projects/CalistisCore/src/main/java/team/calistis/system/PlayerSystem.java
-/root/projects/CalistisCore/src/main/java/team/calistis/command/AccountCommandManager.java
-/root/projects/CalistisCore/src/main/java/team/calistis/command/account/AuthenticateAccountCommand.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/listener/AuthenticationListener.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/PlayerRegistrator.java
+/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/AuthenticationManager.java

@@ -1,0 +1,15 @@
+#
+# Configurações de Autenticação
+#
+
+# -> Configure as mensagens do jogador entrar no servidor para efetuar o registro.
+# %s Nome do jogador. 
+on-register-messages:
+  - "\n§6» §7Seja bem vindo(a) §6%s§7, parece que você é novo(a) por aqui"
+  - "§6» §7Comece usando §6/conta registrar §7para efetuar seu registro.\n"
+
+# -> Configure as mensagens ao jogador entrar no servidor para efetuar o login.
+# %s Nome do jogador.
+on-login-messages:
+  - "\n§a» §7Ola §a%s§7, você esta registrado(a) em nosso servidor."
+  - "§a» §7Utilize §a/conta logar §7para efetuar seu login.\n"

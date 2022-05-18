@@ -1,4 +1,4 @@
-package team.calistis.component.user;
+package team.calistis.authentication;
 
 import java.util.Date;
 
@@ -7,9 +7,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class UserAccount {
+public class PlayerRegistrator {
   
   private String password;
-  private Date creationDate;
+  private Date date;
 
 }
