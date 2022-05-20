@@ -85,7 +85,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>plugin.yml</include>
-                    <include>AuthenticationConfiguration.yml</include>
+                    <include>MessagesConfiguration.yml</include>
                 </includes>
             </resource>
         </resources>

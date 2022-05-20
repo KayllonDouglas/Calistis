@@ -1,8 +1,8 @@
-/**
+/*
  * The APACHE License (APACHE)
- *
- * Copyright (c) 2022 Author: Constanze, All rights reserved.
- *
+ * 
+ * Copyright (c) 2022 Author. All rights reserved.
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -15,30 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis;
+package team.calistis.admnistration;
 
-import cn.nukkit.plugin.PluginBase;
-import cn.nukkit.utils.LogLevel;
-
-public class Calistis extends PluginBase {
-
-  public static Calistis instance;
-
-  @Override
-  public void onEnable() {
-    instance = this;
-
-    this.getLogger().log(LogLevel.INFO, "§aCalistis is now enabled");
-  }
-
-  @Override
-  public void onDisable() {
-
-    this.getLogger().log(LogLevel.INFO, "§cCalistis is now disabled.");
-  }
-
-  public static Calistis getInstance() {
-    return instance;
-  }
-
+public class AdmnistrationSystem {
+   
 }

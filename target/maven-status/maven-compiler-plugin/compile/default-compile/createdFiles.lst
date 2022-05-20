@@ -1,4 +1,6 @@
-team/calistis/authentication/listener/AuthenticationListener.class
 team/calistis/Calistis.class
-team/calistis/authentication/PlayerRegistrator.class
-team/calistis/authentication/AuthenticationManager.class
+team/calistis/components/CalistisPlayer.class
+team/calistis/system/configuration/MessagesConfiguration.class
+team/calistis/system/listener/AuthenticationListener.class
+team/calistis/entity/player/PlayerAuthenticationAccount.class
+team/calistis/system/general/PlayerSystem.class

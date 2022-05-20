@@ -1,4 +1,6 @@
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/Calistis.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/listener/AuthenticationListener.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/PlayerRegistrator.java
-/data/data/com.termux/files/home/projects/CalistisCore/src/main/java/team/calistis/authentication/AuthenticationManager.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/entity/player/PlayerAuthenticationAccount.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/system/configuration/MessagesConfiguration.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/system/listener/AuthenticationListener.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/Calistis.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/components/CalistisPlayer.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/system/general/PlayerSystem.java
