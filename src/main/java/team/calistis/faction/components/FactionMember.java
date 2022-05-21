@@ -15,8 +15,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.admnistration;
+package team.calistis.faction.components;
 
-public class AdmnistrationSystem {
-   
+import java.util.UUID;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class FactionMember {
+
+  private UUID memberId;
+  private FactionRole role;
+
 }

@@ -15,3 +15,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package team.calistis.faction.components;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
+public enum FactionRole {
+
+  GUEST("faction-guest", "Guest", 0),
+  MEMBER("faction-member", "Member", 100),
+  OFFICER("faction-officer", "Officer", 200),
+  LEADER("faction-leader", "Leader", 300);
+
+  private String name;
+  private transient String prefix;
+  private int priority;
+
+}

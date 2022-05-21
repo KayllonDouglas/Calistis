@@ -6,28 +6,30 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package team.calistis.faction.components;
 
-package team.calistis.authentication.components;
-
-import java.util.Date;
-
+import cn.nukkit.math.AxisAlignedBB;
+import cn.nukkit.math.Vector3;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class AuthenticationAccount {
+public class FactionClaim {
+  
+  private AxisAlignedBB claimPosition;
 
-  private String password;
-  private Date registerDate;
+  public boolean isInsideClaim(Vector3 vector) {
+    return !this.claimPosition.isVectorInside(vector);
+  }
 
 }
