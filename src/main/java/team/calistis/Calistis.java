@@ -17,8 +17,10 @@
  */
 package team.calistis;
 
+import cn.nukkit.command.PluginCommand;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.LogLevel;
+import team.calistis.command.SerializeCommand;
 
 public class Calistis extends PluginBase {
 

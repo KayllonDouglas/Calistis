@@ -15,34 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.faction.components;
-
-import java.math.BigDecimal;
-import java.util.Set;
+package team.calistis.administrative.components;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import team.calistis.administrative.types.MuteType;
 
 @Data
 @AllArgsConstructor
-public class Faction {
+public class MuteComponent {
   
-  public static final int MAX_NAME_LENGTH = 10;
-  public static final int MAX_TAG_LENGTH = 3;
-  public static final int MAX_MEMBERS = 30;
-  public static final int MAX_OFFICERS = 2;
-
-  private String tag;
-  private FactionMember leader;
-  private Set<FactionMember> guests;
-  private Set<FactionMember> members;
-  private Set<FactionMember> officers;
-
-  private BigDecimal balance;
-  private int power;
-
-  private boolean isOpen;
-  private boolean isPeaceful;
-  private boolean inWar;
+  private String reason;
+  private MuteType muteType;
 
 }

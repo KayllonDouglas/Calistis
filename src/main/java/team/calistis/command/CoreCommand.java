@@ -15,21 +15,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.faction.components;
+package team.calistis.command;
 
-import cn.nukkit.math.AxisAlignedBB;
-import cn.nukkit.math.Vector3;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import cn.nukkit.Player;
 
-@Data
-@AllArgsConstructor
-public class FactionClaim {
+public interface CoreCommand {
+
+  String getName();
+
+  String getPermission();
+
+  String getDescription();
+
+  void dispatch(Player executor, String[] args);
   
-  private AxisAlignedBB claimPosition;
-
-  public boolean isInsideClaim(Vector3 vector) {
-    return !this.claimPosition.isVectorInside(vector);
-  }
-
 }
