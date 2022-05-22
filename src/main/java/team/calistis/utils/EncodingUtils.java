@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package src.main.java.team.calistis.utils;
+package team.calistis.utils;
 
 import cn.nukkit.item.Item;
 import cn.nukkit.utils.BinaryStream;
@@ -24,32 +24,23 @@ public final class EncodingUtils {
 
   /**
    * this method encode a item into a byte array sequence
-   * 
    * Usage: EncodingUtils.encodeItem(item) -> byte[]
-   *
    * @return byte[]
-   * @KayllonDouglas
    */
   public static final byte[] encodeItem(Item item) {
     BinaryStream stream = new BinaryStream();
-
-    stream.writeItem(item);
-    return stream.getBuffer(); // @KayllonDouglas is literally this bruh
+    stream.putSlot(item);
+    return stream.getBuffer();
   }
 
   /**
    * this method decode an item of a byte array sequence
-   *
    * Usage: EncodingUtils.decodeItem(byte[]) -> Item
-   *
    * @return Item
-   * @KayllonDouglas
    */
   public static final Item decodeItem(byte[] input) {
     BinaryStream stream = new BinaryStream(input);
-    return stream.getItem(0); // Literally this.
-                              // You have auto completion, if has any wrong method
-                              // please fix it okay? @KayllonDouglas
+    return stream.getSlot();
   }
 
 }

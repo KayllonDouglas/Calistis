@@ -1,4 +1,5 @@
 team/calistis/administrative/components/BanComponent.class
+team/calistis/utils/EncodingUtils.class
 team/calistis/Calistis.class
 team/calistis/command/CommandManager.class
 team/calistis/command/administrative/BanCommand.class

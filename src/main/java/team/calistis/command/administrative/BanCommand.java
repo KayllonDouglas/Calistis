@@ -17,9 +17,13 @@
  */
 package team.calistis.command.administrative;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import cn.nukkit.Player;
+import lombok.SneakyThrows;
 import team.calistis.Calistis;
 import team.calistis.CalistisSystem;
 import team.calistis.administrative.components.BanComponent;
@@ -42,14 +46,14 @@ public class BanCommand implements CoreCommand {
     return "Use para efetuar o banimento de um jogador que jogabde forma irregular";
   }
 
-  // /adm? system? ban <player> <reason> <isPermanent?>
+  @SneakyThrows
   @Override
   public void dispatch(Player executor, String[] args) {
     if (args.length <= 1) {
       executor.sendMessage(" §4» §7Você §4não especificou §7o nome de um jogador.");
       return;
     }
-    if (args.length >= 2) {
+    if (args.length <= 2) {
       executor.sendMessage(" §4» §7Você §4não especificou §7a razão do banimento.");
       return;
     }
@@ -66,7 +70,10 @@ public class BanCommand implements CoreCommand {
     CalistisSystem.getBannedPlayers().put(target.getUniqueId(), new BanComponent(reason, new Date()));
     Calistis.getInstance().getServer().broadcastMessage(" §4» §7O jogador §d" + target.getNameTag() + " §7foi banido do servidor.");
     Calistis.getInstance().getServer().broadcastMessage(" §4» §7Motivo do banimento: §d" + reason + "");
-    target.kick("§4Você foi banimo permanentemente deste servidor\n\n§7MOTIVO\n§4" + reason);
+    SimpleDateFormat format = new SimpleDateFormat("EEEEE, dd MMMMM yyyy, HH:mm:ss", new Locale("pt","BR"));
+    format.setTimeZone(TimeZone.getTimeZone("America/Sao_Paulo"));
+    String date = format.format(CalistisSystem.getBannedPlayers().get(target.getUniqueId()).getBanDate());
+    target.close("", String.format("§4Você foi banido permanentemente deste servidor\n§7MOTIVO\n\n§4%s\n\n§7Data do banimento: §4%s§7.", reason, date));
   }
 
 }
