@@ -19,13 +19,11 @@ package team.calistis.administrative.components;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import team.calistis.administrative.types.MuteType;
 
 @Data
 @AllArgsConstructor
 public class MuteComponent {
   
   private String reason;
-  private MuteType muteType;
-
+  
 }

@@ -1,9 +1,9 @@
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/administrative/types/BanType.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/SerializeCommand.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/CoreCommand.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/CommandManager.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/administrative/components/MuteComponent.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/administrative/BanCommand.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/CalistisSystem.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/administrative/MuteCommand.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/administrative/components/BanComponent.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/utils/EncodingUtils.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/administrative/types/MuteType.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/CalistisListener.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/Calistis.java

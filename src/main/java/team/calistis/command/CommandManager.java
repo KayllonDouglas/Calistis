@@ -26,11 +26,16 @@ import cn.nukkit.command.CommandExecutor;
 import cn.nukkit.command.CommandSender;
 import lombok.Getter;
 import team.calistis.Calistis;
+import team.calistis.command.administrative.BanCommand;
 
 public class CommandManager implements CommandExecutor {
 
   @Getter
   private static List<CoreCommand> allCommands = new ArrayList<>();
+
+  static {
+    allCommands.add(new BanCommand());
+  }
 
   @Override
   public boolean onCommand(CommandSender sender, Command command, String labal, String[] args) {

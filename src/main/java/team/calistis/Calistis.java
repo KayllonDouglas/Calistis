@@ -20,7 +20,7 @@ package team.calistis;
 import cn.nukkit.command.PluginCommand;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.LogLevel;
-import team.calistis.command.SerializeCommand;
+import team.calistis.command.CommandManager;
 
 public class Calistis extends PluginBase {
 
@@ -29,6 +29,8 @@ public class Calistis extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
+
+    ((PluginCommand<?>)this.getCommand("staff")).setExecutor(new CommandManager());
 
     this.getLogger().log(LogLevel.INFO, "§aCalistis is now enabled");
   }

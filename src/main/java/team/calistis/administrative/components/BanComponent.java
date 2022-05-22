@@ -17,18 +17,16 @@
  */
 package team.calistis.administrative.components;
 
-import java.sql.Date;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import team.calistis.administrative.types.BanType;
 
 @Data
 @AllArgsConstructor
 public class BanComponent {
   
   private String reason;
-  private BanType banType;
   private Date banDate;
 
 }

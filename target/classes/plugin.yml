@@ -5,5 +5,5 @@ main: team.calistis.Calistis
 author: Constanze
 
 commands:
-  serialize:
-    description: "Serialize items"
+  staff:
+    description: "General Staff Commands"

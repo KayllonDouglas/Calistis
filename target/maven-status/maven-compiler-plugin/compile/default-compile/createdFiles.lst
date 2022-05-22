@@ -1,8 +1,7 @@
 team/calistis/administrative/components/BanComponent.class
-team/calistis/command/SerializeCommand.class
-team/calistis/utils/EncodingUtils.class
 team/calistis/Calistis.class
+team/calistis/command/CommandManager.class
+team/calistis/command/administrative/BanCommand.class
 team/calistis/administrative/components/MuteComponent.class
-team/calistis/administrative/types/BanType.class
 team/calistis/CalistisSystem.class
-team/calistis/administrative/types/MuteType.class
+team/calistis/command/CoreCommand.class

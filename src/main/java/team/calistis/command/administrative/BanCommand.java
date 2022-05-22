@@ -17,6 +17,8 @@
  */
 package team.calistis.command.administrative;
 
+import java.util.Date;
+
 import cn.nukkit.Player;
 import team.calistis.Calistis;
 import team.calistis.CalistisSystem;
@@ -44,31 +46,27 @@ public class BanCommand implements CoreCommand {
   @Override
   public void dispatch(Player executor, String[] args) {
     if (args.length <= 1) {
-      executor.sendMessage(" §4» §7Uso indevido, utilize §4/" + this.getName() + "§7.");
-      return;
-    }
-    if (args.length <= 2) {
       executor.sendMessage(" §4» §7Você §4não especificou §7o nome de um jogador.");
       return;
     }
-    Player target = Calistis.getInstance().getServer().getPlayer(args[2]);
-    if (args.length <= 3) {
+    if (args.length >= 2) {
       executor.sendMessage(" §4» §7Você §4não especificou §7a razão do banimento.");
       return;
     }
-    String reason = args[3];
-    if (args.length <= 4) {
-      return;
-    }
+    Player target = Calistis.getInstance().getServer().getPlayer(args[1]);
     if (target == null) {
       executor.sendMessage(" §4» §7Este jogador §4não existe §7ou §4esta offline§7.");
       return;
     }
+    String reason = args[2];
     if (CalistisSystem.getBannedPlayers().containsKey(target.getUniqueId())) {
       executor.sendMessage(" §4» §7Este jogador ja esta banido!");
       return;
     }
-    CalistisSystem.getBannedPlayers().put(target.getUniqueId(), new BanComponent(reason, banType, banDate));
+    CalistisSystem.getBannedPlayers().put(target.getUniqueId(), new BanComponent(reason, new Date()));
+    Calistis.getInstance().getServer().broadcastMessage(" §4» §7O jogador §d" + target.getNameTag() + " §7foi banido do servidor.");
+    Calistis.getInstance().getServer().broadcastMessage(" §4» §7Motivo do banimento: §d" + reason + "");
+    target.kick("§4Você foi banimo permanentemente deste servidor\n\n§7MOTIVO\n§4" + reason);
   }
 
 }
