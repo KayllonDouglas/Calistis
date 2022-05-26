@@ -1,7 +1,7 @@
 /*
  * The APACHE License (APACHE)
  * 
- * Copyright (c) 2022 Author. All rights reserved.
+ * Copyright (c) 2022 Constanze. All rights reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,18 +15,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.command;
+package team.calistis.service.components.login;
 
-import cn.nukkit.Player;
+import java.util.Date;
+import java.util.UUID;
 
-public interface CoreCommand {
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-  String getName();
+@Data
+@AllArgsConstructor
+public class LoginAccount {
 
-  String getPermission();
+  private UUID uniqueId();
+  private String password;
+  private Date registerDate;
 
-  String getDescription();
-
-  void dispatch(Player executor, String[] args);
-  
 }

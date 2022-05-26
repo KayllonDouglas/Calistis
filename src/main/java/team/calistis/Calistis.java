@@ -17,28 +17,25 @@
  */
 package team.calistis;
 
-import cn.nukkit.command.PluginCommand;
 import cn.nukkit.plugin.PluginBase;
-import cn.nukkit.utils.LogLevel;
-import team.calistis.command.CommandManager;
+import lombok.Getter;
+import static team.calistis.utils.Utils.log;
 
+@Getter
 public class Calistis extends PluginBase {
 
-  public static Calistis instance;
+  private static Calistis instance;
 
   @Override
   public void onEnable() {
     instance = this;
-
-    ((PluginCommand<?>)this.getCommand("staff")).setExecutor(new CommandManager());
-
-    this.getLogger().log(LogLevel.INFO, "§aCalistis is now enabled");
+    this.getServer().getPluginManager().registerEvents(new CalistisListener(), this);
+    log("§aCalistisCore is now enabled.");
   }
 
   @Override
   public void onDisable() {
-
-    this.getLogger().log(LogLevel.INFO, "§cCalistis is now disabled.");
+    log("§cCalistisCore is now disabled.");
   }
 
   public static Calistis getInstance() {
