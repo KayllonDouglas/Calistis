@@ -1,6 +1,14 @@
-team/calistis/user/UserSystem.class
 team/calistis/Calistis.class
 team/calistis/CalistisListener.class
-team/calistis/CalistisListener$1.class
+team/calistis/economy/command/MoneyCommand.class
 team/calistis/utils/Utils.class
-team/calistis/objects/CalistisUser.class
+team/calistis/controller/EconomyController.class
+team/calistis/economy/EconomyAccount.class
+team/calistis/zcore/CalistisPlugin.class
+team/calistis/command/CommandException.class
+team/calistis/utils/TextReplacer.class
+team/calistis/command/SubCommand.class
+team/calistis/command/Command.class
+team/calistis/controller/CommandController.class
+team/calistis/economy/command/subcommand/SeeMoneySubCommand.class
+team/calistis/utils/TitleUtils.class

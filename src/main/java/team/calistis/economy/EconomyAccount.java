@@ -1,7 +1,7 @@
 /*
  * The APACHE License (APACHE)
  * 
- * Copyright (c) 2022 Constanze. All rights reserved.
+ * Copyright (c) 2022 Constanze All rights reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,13 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.service.components.login;
+package team.calistis.economy;
 
-public enum LoginState {
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-  OFFLINE,
-  REGISTERING,
-  LOGGING,
-  ONLINE;
+@Data
+@AllArgsConstructor
+public class EconomyAccount {
+
+  public static final double DEFAULT_MONEY_VALUE = 1000;
+  public static final double DEFAULT_CASH_VALUE = 100;
+
+  private double currentMoney;
+  private double currentCash;
 
 }

@@ -15,20 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis.service.components.login;
+package team.calistis.command;
 
-import java.util.Date;
-import java.util.UUID;
-
+import cn.nukkit.command.CommandSender;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 @AllArgsConstructor
-public class LoginAccount {
+public abstract class SubCommand {
+ 
+  private String name, usage;
+  private String[] aliases;
 
-  private UUID uniqueId();
-  private String password;
-  private Date registerDate;
+  public abstract boolean execute(CommandSender sender, String label, String[] args);
 
 }

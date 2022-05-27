@@ -1,7 +1,7 @@
 /*
  * The APACHE License (APACHE)
  * 
- * Copyright (c) 2022 Author. All rights reserved.
+ * Copyright (c) 2022 Calistis. All rights reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,30 +15,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package team.calistis;
+package team.calistis.controller;
 
-import cn.nukkit.Player;
-import cn.nukkit.event.EventHandler;
-import cn.nukkit.event.Listener;
-import cn.nukkit.event.player.PlayerLoginEvent;
+import cn.nukkit.command.Command;
 import lombok.Getter;
-import team.calistis.economy.EconomyAccount;
+import team.calistis.Calistis;
+import team.calistis.economy.command.MoneyCommand;
 
 @Getter
-public class CalistisListener implements Listener {
+public class CommandController {
 
   private final Calistis calistis;
 
-  public CalistisListener(Calistis calistis) {
+  public CommandController(Calistis calistis) {
     this.calistis = calistis;
+    this.handleCommands();
   }
 
-  @EventHandler
-  public void onLogin(PlayerLoginEvent event) {
-    Player player = event.getPlayer();
-    if (!this.calistis.getEconomyController().hasEconomyAccount(player)) {
-      this.calistis.getEconomyController().createEconomyAccount(player, new EconomyAccount(EconomyAccount.DEFAULT_MONEY_VALUE, EconomyAccount.DEFAULT_CASH_VALUE));
-    }
+  private void handleCommands() {
+    this.registerCommand(new MoneyCommand());
+  }
+
+  public boolean registerCommand(Command command) {
+    return this.calistis.getServer()
+        .getCommandMap()
+        .register(command.getName(), command);
   }
 
 }

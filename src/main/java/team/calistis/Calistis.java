@@ -17,29 +17,34 @@
  */
 package team.calistis;
 
-import cn.nukkit.plugin.PluginBase;
 import lombok.Getter;
-import static team.calistis.utils.Utils.log;
+import team.calistis.controller.CommandController;
+import team.calistis.controller.EconomyController;
+import team.calistis.zcore.CalistisPlugin;
 
 @Getter
-public class Calistis extends PluginBase {
+public class Calistis extends CalistisPlugin {
 
+  @Getter
   private static Calistis instance;
+  
+  private EconomyController economyController;
+  private CommandController commandController;
 
   @Override
-  public void onEnable() {
+  public boolean onCoreEnable() {
     instance = this;
-    this.getServer().getPluginManager().registerEvents(new CalistisListener(), this);
-    log("§aCalistisCore is now enabled.");
+    this.commandController = new CommandController(this);
+    this.economyController = new EconomyController(this);
+    this.getServer().getPluginManager().registerEvents(new CalistisListener(this), this);
+    this.getLogger().info("§aCalistisCore is now enabled, version: " + this.getDescription().getVersion() + ".");
+    return false;
   }
 
   @Override
-  public void onDisable() {
-    log("§cCalistisCore is now disabled.");
-  }
-
-  public static Calistis getInstance() {
-    return instance;
+  public boolean onCoreDisable() {
+    this.getLogger().info("§cCalistisCore is now disabled.");
+    return false;
   }
 
 }
