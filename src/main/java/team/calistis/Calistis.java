@@ -1,19 +1,17 @@
 package team.calistis;
 
-import lombok.Getter;
-import team.calistis.command.CommandController;
 import team.calistis.zcore.CalistisPlugin;
 
-@Getter
 public class Calistis extends CalistisPlugin {
 
   private static Calistis instance;
-  private CommandController commandController;
 
   @Override
   public boolean onCoreEnable() {
-    this.commandController = new CommandController(this);
-    this.getServer().getPluginManager().registerEvents(new CalistisListener(this), this);
+    if (!this.registerListeners() && !this.registerManagers()) {
+      this.suicide();
+      return false;
+    }
     this.getLogger().info("§aCalistisCore is now enabled, version: " + this.getDescription().getVersion() + ".");
     return false;
   }
@@ -22,6 +20,15 @@ public class Calistis extends CalistisPlugin {
   public boolean onCoreDisable() {
     this.getLogger().info("§cCalistisCore is now disabled.");
     return false;
+  }
+
+  public boolean registerManagers() {
+    return true;
+  }
+
+  public boolean registerListeners() {
+    this.getServer().getPluginManager().registerEvents(new  CalistisListener(this), this);
+    return true;
   }
 
   public static Calistis getInstance() {
