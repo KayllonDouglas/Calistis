@@ -1,85 +1,96 @@
 package team.calistis.system;
 
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-
 import cn.nukkit.Player;
 import lombok.Getter;
 import team.calistis.economy.EconomyAccount;
 
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
+
 public class EconomySystem {
 
   @Getter
-  private static Set<EconomyAccount> economyAccounts = new HashSet<>();
+  private static final Set<EconomyAccount> economyAccounts = new HashSet<>();
 
   private EconomySystem() {
     throw new IllegalStateException("This class cannot be stantiated.");
   }
 
   public static boolean hasEconomyAccount(Player player) {
-    return getEconomyAccount(player) != null;
+    return getEconomyAccount(player).isPresent();
   }
 
-  public static EconomyAccount getEconomyAccount(Player player) {
-    return economyAccounts.parallelStream()
-        .filter(ea -> ea.getUniqueId().equals(player.getUniqueId()))
-        .findFirst().get();
+  public static Optional<EconomyAccount> getEconomyAccount(Player player) {
+    return getEconomyAccounts()
+            .stream()
+            .filter(account -> account.getUniqueId().equals(player.getUniqueId()))
+            .findFirst();
   }
 
-  public static boolean createEconomyAccount(EconomyAccount economyAccount) {
-    return economyAccounts.add(economyAccount);
+  public static void createEconomyAccount(EconomyAccount economyAccount) {
+    economyAccounts.add(economyAccount);
   }
 
   public boolean hasEnoughMoney(Player player, double value) {
     return getEconomyAccount(player)
-        .getMoney() >= value;
+            .map(account -> account.getMoney() >= value)
+            .orElse(false);
   }
 
   public boolean hasEnoughCash(Player player, double value) {
     return getEconomyAccount(player)
-        .getCash() >= value;
+            .map(account -> account.getCash() >= value)
+            .orElse(false);
   }
 
   public static double getMoney(Player player) {
     return getEconomyAccount(player)
-        .getMoney();
+            .map(EconomyAccount::getMoney)
+            .orElse(0.0);
   }
 
   public static double getCash(Player player) {
     return getEconomyAccount(player)
-        .getCash();
+            .map(EconomyAccount::getCash)
+            .orElse(0.0);
   }
 
   public static void setMoney(Player player, double value) {
     getEconomyAccount(player)
-        .setMoney(value);
+            .ifPresent(account -> account.setMoney(value));
   }
 
   public static void setCash(Player player, double value) {
     getEconomyAccount(player)
-        .setCash(value);
+            .ifPresent(account -> account.setCash(value));
   }
 
   public static void increaseMoney(Player player, double value) {
-    setMoney(player, getMoney(player) + value);
+    getEconomyAccount(player)
+            .ifPresent(account -> account.setMoney(account.getMoney() + value));
   }
 
   public static void increaseCash(Player player, double value) {
-    setCash(player, getCash(player) + value);
+    getEconomyAccount(player)
+            .ifPresent(account -> account.setCash(account.getCash() + value));
   }
 
   public static void reduceMoney(Player player, double value) {
-    setMoney(player, getMoney(player) - value);
+    getEconomyAccount(player)
+            .ifPresent(account -> account.setMoney(account.getMoney() - value));
   }
 
   public static void reduceCash(Player player, double value) {
-    setCash(player, getCash(player) - value);
+    getEconomyAccount(player)
+            .ifPresent(account -> account.setCash(account.getCash() - value));
   }
 
   public static void payMoney(Player payer, Player target, double value) {
-    reduceMoney(payer, value);
-    increaseMoney(target, value);
+    getEconomyAccount(payer).ifPresent(payerAccount -> getEconomyAccount(target).ifPresent(targetAccount -> {
+      payerAccount.setMoney(payerAccount.getMoney() - value);
+      targetAccount.setMoney(targetAccount.getMoney() + value);
+    }));
   }
 
 }

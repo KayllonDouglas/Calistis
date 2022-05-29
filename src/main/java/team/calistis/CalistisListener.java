@@ -5,6 +5,8 @@ import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerLoginEvent;
 import lombok.Getter;
+import team.calistis.economy.EconomyAccount;
+import team.calistis.system.EconomySystem;
 
 @Getter
 public class CalistisListener implements Listener {
@@ -18,6 +20,9 @@ public class CalistisListener implements Listener {
   @EventHandler
   public void onLogin(PlayerLoginEvent event) {
     Player player = event.getPlayer();
+    if (!EconomySystem.hasEconomyAccount(player)) {
+      EconomySystem.createEconomyAccount(new EconomyAccount(player.getUniqueId(), EconomyAccount.DEFAULT_MONEY_VALUE, EconomyAccount.DEFAULT_CASH_VALUE));
+    }
   }
 
 }

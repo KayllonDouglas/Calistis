@@ -4,3 +4,7 @@ api: ["1.0.0"]
 main: team.calistis.Calistis
 author: Constanze
 load: POSTWORLD
+
+commands:
+  money:
+    description: Default Money Command

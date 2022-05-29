@@ -1,5 +1,7 @@
 package team.calistis;
 
+import cn.nukkit.command.PluginCommand;
+import team.calistis.command.EconomyCommandController;
 import team.calistis.zcore.CalistisPlugin;
 
 public class Calistis extends CalistisPlugin {
@@ -8,21 +10,26 @@ public class Calistis extends CalistisPlugin {
 
   @Override
   public boolean onCoreEnable() {
-    if (!this.registerListeners() && !this.registerManagers()) {
+    if (!this.registerListeners() && !this.registerManagers() && !this.registerControllers()) {
       this.suicide();
       return false;
     }
     this.getLogger().info("§aCalistisCore is now enabled, version: " + this.getDescription().getVersion() + ".");
-    return false;
+    return true;
   }
 
   @Override
   public boolean onCoreDisable() {
     this.getLogger().info("§cCalistisCore is now disabled.");
-    return false;
+    return true;
   }
 
   public boolean registerManagers() {
+    return true;
+  }
+
+  public boolean registerControllers() {
+    ((PluginCommand<?>) this.getCommand("money")).setExecutor(new EconomyCommandController());
     return true;
   }
 
