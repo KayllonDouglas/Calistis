@@ -1,46 +1,43 @@
 package team.calistis;
 
-import cn.nukkit.command.PluginCommand;
-import team.calistis.command.EconomyCommandController;
-import team.calistis.zcore.CalistisPlugin;
+import com.nukkitx.fakeinventories.inventory.FakeInventories;
 
-public class Calistis extends CalistisPlugin {
+import cn.nukkit.plugin.PluginBase;
+import cn.nukkit.plugin.service.RegisteredServiceProvider;
+import team.calistis.commands.CommandManager;
+import team.calistis.economy.BankManager;
+
+public class Calistis extends PluginBase {
 
   private static Calistis instance;
+  private BankManager bankManager;
+  private CommandManager commandManager;
 
   @Override
-  public boolean onCoreEnable() {
-    if (!this.registerListeners() && !this.registerManagers() && !this.registerControllers()) {
-      this.suicide();
-      return false;
-    }
-    this.getLogger().info("§aCalistisCore is now enabled, version: " + this.getDescription().getVersion() + ".");
-    return true;
+  public void onEnable() {
+    instance = this;
+
+    this.bankManager = new BankManager(this);
+    this.commandManager = new CommandManager(this);
+    this.getServer().getPluginManager().registerEvents(new CalistisListener(this), this);
+    this.getLogger().info("§aCalistisCore is now enabled, version " + this.getDescription().getVersion() + ".");
   }
 
   @Override
-  public boolean onCoreDisable() {
+  public void onDisable() {
     this.getLogger().info("§cCalistisCore is now disabled.");
-    return true;
-  }
-
-  public boolean registerManagers() {
-    return true;
-  }
-
-  public boolean registerControllers() {
-    ((PluginCommand<?>) this.getCommand("money")).setExecutor(new EconomyCommandController());
-    return true;
-  }
-
-  public boolean registerListeners() {
-    this.getServer().getPluginManager().registerEvents(new  CalistisListener(this), this);
-    return true;
   }
 
   public static Calistis getInstance() {
-    if (instance == null) instance = new Calistis();
     return instance;
+  }
+
+  public BankManager getBankManager() {
+    return bankManager;
+  }
+
+  public CommandManager getCommandManager() {
+    return commandManager;
   }
 
 }
