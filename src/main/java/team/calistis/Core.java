@@ -1,7 +1,6 @@
 package team.calistis;
 
 import cn.nukkit.plugin.PluginBase;
-import team.calistis.command.CommandManager;
 
 public class Core extends PluginBase {
 
@@ -10,8 +9,6 @@ public class Core extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
-    new CommandManager(this);
-    this.getServer().getPluginManager().registerEvents(new CoreListener(this), this);
     this.getLogger().info("§aCalistisCore is now enabled, version " + this.getDescription().getVersion() + ".");
   }
 
