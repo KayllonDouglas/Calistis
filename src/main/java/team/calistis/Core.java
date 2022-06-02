@@ -1,20 +1,20 @@
 package team.calistis;
 
-import cn.nukkit.plugin.PluginBase;
+import team.calistis.zcore.CoreBase;
 
-public class Core extends PluginBase {
+public class Core extends CoreBase {
 
-  private static Core instance;
+  private static final Core instance = new Core();
 
   @Override
-  public void onEnable() {
-    instance = this;
-    this.getLogger().info("§aCalistisCore is now enabled, version " + this.getDescription().getVersion() + ".");
+  public void onCoreEnable() {
+
+    this.getLogger().info("§7CalistisCore has been enabled, version: §a" + this.getDescription().getVersion() + "§7.");
   }
 
   @Override
-  public void onDisable() {
-    this.getLogger().info("§cCalistisCore is now disabled.");
+  public void onCoreDisable() {
+    this.getLogger().info("§7CalistisCore has been disabled, version: §c" + this.getDescription().getVersion() + "§7.");
   }
 
   public static Core getInstance() {

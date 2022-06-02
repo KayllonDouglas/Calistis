@@ -1,4 +1,4 @@
-package team.calistis.zcore.utils;
+package team.calistis.zcore;
 
 import cn.nukkit.Player;
 import cn.nukkit.item.Item;

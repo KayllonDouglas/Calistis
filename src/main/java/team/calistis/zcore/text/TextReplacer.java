@@ -2,7 +2,7 @@
  * Replacer instance to improve code readability when replacing a lot of different strings with the same pattern.
  * @Author Gustavo Arantes (https://arantes.dev/) <- Autor Original
  */
-package team.calistis.zcore.utils.text;
+package team.calistis.zcore.text;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package team.calistis.command;
+package team.calistis.zcore.command;
 
 import java.util.HashMap;
 import java.util.Map;

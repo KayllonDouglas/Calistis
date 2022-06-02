@@ -1,4 +1,4 @@
-package team.calistis.zcore.utils.form;
+package team.calistis.zcore.form;
 
 import cn.nukkit.Player;
 import cn.nukkit.event.player.PlayerFormRespondedEvent;

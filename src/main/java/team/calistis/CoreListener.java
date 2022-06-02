@@ -3,7 +3,7 @@ package team.calistis;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerFormRespondedEvent;
-import team.calistis.zcore.utils.form.FormScreen;
+import team.calistis.zcore.form.FormScreen;
 
 public class CoreListener implements Listener {
 

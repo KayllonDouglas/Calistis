@@ -1,10 +1,11 @@
 package team.calistis.command;
 
 import team.calistis.Core;
+import team.calistis.zcore.command.CoreCommand;
 
 public class CommandManager {
 
-  private Core core;
+  private final Core core;
 
   public CommandManager(Core core) {
     this.core = core;
