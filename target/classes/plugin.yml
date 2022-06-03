@@ -1,6 +1,0 @@
-name: CalistisCore
-version: "1.0.0"
-api: ["1.0.0"]
-main: team.calistis.Core
-author: Constanze
-load: POSTWORLD

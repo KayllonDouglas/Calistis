@@ -3,14 +3,18 @@ package team.calistis;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerFormRespondedEvent;
+import cn.nukkit.event.player.PlayerPreLoginEvent;
+import team.calistis.economy.EconomyManager;
+import team.calistis.economy.PlayerEconomy;
 import team.calistis.zcore.form.FormScreen;
 
 public class CoreListener implements Listener {
 
-  private final Core core;
-
-  public CoreListener(Core core) {
-    this.core = core;
+  @EventHandler
+  public void onFirstLogin(PlayerPreLoginEvent event) {
+    if (!EconomyManager.hasEconomy(event.getPlayer()))
+      EconomyManager.createEconomy(event.getPlayer(),
+          new PlayerEconomy(PlayerEconomy.DEFAULT_MONEY_VALUE, PlayerEconomy.DEFAULT_CASH_VALUE));
   }
 
   @EventHandler
@@ -22,10 +26,6 @@ public class CoreListener implements Listener {
     if (event.getResponse() == null)
       return;
     ((FormScreen) event.getWindow()).onResponse(event);
-  }
-
-  public Core getCore() {
-    return core;
   }
 
 }
