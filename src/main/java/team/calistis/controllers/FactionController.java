@@ -32,19 +32,19 @@ public class FactionController {
             .getPower();
   }
 
-  public static String getDescription(String name) {
-    return getFaction(name)
+  public static String getDescription(String factionName) {
+    return getFaction(factionName)
             .getDescription();
   }
 
-  public static FactionMember getMember(String name, UUID uuid) {
-    return getFaction(name)
+  public static FactionMember getMember(String factionName, UUID memberId) {
+    return getFaction(factionName)
             .getMembers()
-            .get(uuid);
+            .get(memberId);
   }
 
-  public static FactionRole getMemberRole(String name, UUID uuid) {
-    return getMember(name, uuid)
+  public static FactionRole getMemberRole(String factionName, UUID memberId) {
+    return getMember(factionName, memberId)
             .getMemberRole();
   }
 
