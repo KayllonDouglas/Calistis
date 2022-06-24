@@ -11,41 +11,40 @@ import java.util.UUID;
 
 public class FactionController {
 
-  @Getter
-  private static final Map<String, Faction> factionsMap = new HashMap<>();
+    @Getter
+    private static final Map<String, Faction> factionsMap = new HashMap<>();
 
-  public static Faction getFaction(String factionName) {
-    return factionsMap.get(factionName);
-  }
+    public static Faction getFaction(String factionName) {
+        return factionsMap.get(factionName);
+    }
 
-  public static Faction deleteFaction(String factionName) {
-    return factionsMap.remove(factionName);
-  }
+    public static Faction deleteFaction(String factionName) {
+        return factionsMap.remove(factionName);
+    }
 
-  public static String getTag(String factionName) {
-    return getFaction(factionName)
-            .getTag();
-  }
+    public static String getTag(String factionName) {
+        return getFaction(factionName)
+                .getTag();
+    }
 
-  public static int getPower(String factionName) {
-    return getFaction(factionName)
-            .getPower();
-  }
+    public static int getPower(String factionName) {
+        return getFaction(factionName)
+                .getPower();
+    }
 
-  public static String getDescription(String factionName) {
-    return getFaction(factionName)
-            .getDescription();
-  }
+    public static String getDescription(String factionName) {
+        return getFaction(factionName)
+                .getDescription();
+    }
 
-  public static FactionMember getMember(String factionName, UUID memberId) {
-    return getFaction(factionName)
-            .getMembers()
-            .get(memberId);
-  }
+    public static FactionMember getMember(String factionName, UUID memberId) {
+        return getFaction(factionName)
+                .getMembers()
+                .get(memberId);
+    }
 
-  public static FactionRole getMemberRole(String factionName, UUID memberId) {
-    return getMember(factionName, memberId)
-            .getMemberRole();
-  }
-
+    public static FactionRole getMemberRole(String factionName, UUID memberId) {
+        return getMember(factionName, memberId)
+                .getMemberRole();
+    }
 }

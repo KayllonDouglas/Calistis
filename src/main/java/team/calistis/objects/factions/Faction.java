@@ -10,9 +10,9 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Faction {
 
-  private String tag;
-  private String description;
-  private Map<UUID, FactionMember> members;
-  private int power;
+    private String tag;
+    private String description;
+    private Map<UUID, FactionMember> members;
+    private int power;
 
 }

@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class FactionMember {
 
-  private FactionRole memberRole;
+    private FactionRole memberRole;
 
 }
