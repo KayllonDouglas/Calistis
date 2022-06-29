@@ -1,12 +1,12 @@
-package team.calistis.objects.factions;
+package team.calistis.api.faction;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
 @AllArgsConstructor
+@Data
 public class FactionMember {
 
-    private FactionRole memberRole;
+  private FactionRole role;
 
 }

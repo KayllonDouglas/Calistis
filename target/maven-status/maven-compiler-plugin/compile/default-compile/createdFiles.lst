@@ -1,12 +1,5 @@
-team/calistis/repositories/FactionsRepository.class
+team/calistis/command/CommandManager.class
 team/calistis/zcore/command/SubCommand.class
-team/calistis/objects/factions/Faction.class
 team/calistis/zcore/command/CoreCommand.class
-team/calistis/zcore/util/TextFormatter.class
-team/calistis/zcore/CoreBase.class
-team/calistis/repositories/FactionsRepository$1.class
+team/calistis/CoreListener.class
 team/calistis/Core.class
-team/calistis/objects/factions/FactionMember.class
-team/calistis/objects/factions/FactionRole.class
-team/calistis/zcore/Utils.class
-team/calistis/controllers/FactionController.class

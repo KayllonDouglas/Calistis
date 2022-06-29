@@ -1,19 +1,34 @@
 package team.calistis;
 
+import cn.nukkit.plugin.PluginBase;
 import lombok.extern.log4j.Log4j2;
-import team.calistis.zcore.CoreBase;
+import team.calistis.command.CommandManager;
 
 @Log4j2
-public class Core extends CoreBase {
+public class Core extends PluginBase {
 
-    @Override
-    public void onCoreEnable() {
-        log.info("§7CalistisCore has been enabled, version: §7[§a" + this.getDescription().getVersion() + "§7].");
-    }
+  private static Core instance;
+  private CommandManager commandManager;
 
-    @Override
-    public void onCoreDisable() {
-        log.info("§7CalistisCore has been disabled.");
-    }
+  @Override
+  public void onEnable() {
+    instance = this;
+    this.getServer().getPluginManager().registerEvents(new CoreListener(), this);
+    this.commandManager = new CommandManager(this);
+    log.info("§7CalistisCore has been enabled, version: §7[§a" + this.getDescription().getVersion() + "§7].");
+  }
+
+  @Override
+  public void onDisable() {
+    log.info("§7CalistisCore has been disabled.");
+  }
+
+  public static Core getInstance() {
+    return instance;
+  }
+
+  public CommandManager getCommandManager() {
+      return commandManager;
+  }
 
 }

@@ -11,6 +11,11 @@ public abstract class CoreCommand extends Command {
 
   private Map<String, SubCommand> subCommands;
 
+  public CoreCommand(String name) {
+    super(name);
+    this.subCommands = new HashMap<>();
+  }
+
   public CoreCommand(String name, String description, String usageMessage, String[] aliases) {
     super(name, description, usageMessage, aliases);
     this.subCommands = new HashMap<>();

@@ -1,11 +1,6 @@
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/command/CoreCommand.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/CoreBase.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/objects/factions/Faction.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/Core.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/controllers/FactionController.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/repositories/FactionsRepository.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/objects/factions/FactionMember.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/util/TextFormatter.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/api/FactionAPI.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/CoreListener.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/CommandManager.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/command/SubCommand.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/objects/factions/FactionRole.java
-/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/util/Utils.java
