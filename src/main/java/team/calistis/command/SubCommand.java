@@ -1,4 +1,4 @@
-package team.calistis.zcore.command;
+package team.calistis.command;
 
 import cn.nukkit.command.CommandSender;
 import lombok.AllArgsConstructor;

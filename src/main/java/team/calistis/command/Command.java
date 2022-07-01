@@ -1,22 +1,31 @@
-package team.calistis.zcore.command;
+package team.calistis.command;
+
+import cn.nukkit.command.CommandSender;
+import lombok.SneakyThrows;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.nukkit.command.Command;
-import cn.nukkit.command.CommandSender;
-import lombok.SneakyThrows;
+public abstract class Command extends cn.nukkit.command.Command {
 
-public abstract class CoreCommand extends Command {
+  private final Map<String, SubCommand> subCommands;
 
-  private Map<String, SubCommand> subCommands;
-
-  public CoreCommand(String name) {
+  public Command(String name) {
     super(name);
     this.subCommands = new HashMap<>();
   }
 
-  public CoreCommand(String name, String description, String usageMessage, String[] aliases) {
+  public Command(String name, String description) {
+    super(name, description);
+    this.subCommands = new HashMap<>();
+  }
+
+  public Command(String name, String description, String usageMessage) {
+    super(name, description, usageMessage);
+    this.subCommands = new HashMap<>();
+  }
+
+  public Command(String name, String description, String usageMessage, String[] aliases) {
     super(name, description, usageMessage, aliases);
     this.subCommands = new HashMap<>();
   }
@@ -36,7 +45,7 @@ public abstract class CoreCommand extends Command {
     return this.subCommands.put(name, subCommand);
   }
 
-  public abstract boolean execute(CommandSender arg0, String arg1, String[] arg2);
+  public abstract boolean execute(CommandSender sender, String label, String[] args);
 
   public Map<String, SubCommand> getSubCommands() {
     return subCommands;
