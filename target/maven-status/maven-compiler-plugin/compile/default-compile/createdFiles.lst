@@ -1,5 +1,11 @@
-team/calistis/command/CommandManager.class
+team/calistis/zcore/MenuUtils.class
+team/calistis/command/types/FactionCommand.class
 team/calistis/zcore/command/SubCommand.class
 team/calistis/zcore/command/CoreCommand.class
 team/calistis/CoreListener.class
+team/calistis/api/faction/FactionMember.class
+team/calistis/api/faction/Faction.class
+team/calistis/api/faction/FactionRole.class
+team/calistis/command/types/subcommands/CreateFactionSubCommand.class
+team/calistis/command/CommandManager.class
 team/calistis/Core.class
