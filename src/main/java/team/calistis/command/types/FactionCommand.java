@@ -19,13 +19,12 @@ public class FactionCommand extends Command {
   @Override
   public boolean execute(CommandSender sender, String label, String[] args) {
     if (!sender.isPlayer()) return false;
-    Player player = (Player) sender;
     API.getFactionsMap().values().forEach(fc -> {
-      if (!fc.getMembers().containsKey(player.getUniqueId())) {
-        player.sendMessage("isn't in faction");
+      if (!fc.getMembers().containsKey(((Player)sender).getUniqueId())) {
+        sender.sendMessage("isn't in faction");
         return;
       }
-      player.sendMessage("is in faction");
+      sender.sendMessage("is in faction");
     });
     return false;
   }
