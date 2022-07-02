@@ -5,6 +5,7 @@ import cn.nukkit.command.CommandSender;
 import lombok.extern.log4j.Log4j2;
 import team.calistis.api.API;
 import team.calistis.command.Command;
+import team.calistis.faction.Faction;
 
 import java.util.Map;
 
@@ -21,16 +22,12 @@ public class FactionCommand extends Command {
   @Override
   public boolean execute(CommandSender sender, String label, String[] args) {
     if (!sender.isPlayer()) return false;
+    if (API.getFactionsMap().isEmpty()) {
+      ((Player)sender).sendMessage("no-factions-in-map");
+      return false;
+    }
     API.getFactionsMap().values().forEach(val -> {
-      if (val == null) {
-        ((Player)sender).sendMessage("no-factions");
-        return;
-      }
-      if (!val.getMembers().containsKey(((Player)sender).getUniqueId())) {
-        ((Player)sender).sendMessage("not in faction");
-        return;
-      }
-      ((Player)sender).sendMessage("in faction");
+      ((Player)sender).sendMessage("vals" + val.getMembers().toString());
     });
     return true;
   }
