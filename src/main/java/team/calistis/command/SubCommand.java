@@ -8,8 +8,7 @@ import lombok.Data;
 @AllArgsConstructor
 public abstract class SubCommand {
 
-  private String usage, permission;
-
+  private String permission;
 
   public abstract boolean execute(CommandSender sender, String label, String[] args);
 

@@ -26,7 +26,7 @@ public class FactionCommand extends Command {
       }
       sender.sendMessage("is in faction");
     });
-    return false;
+    return true;
   }
 
 }
