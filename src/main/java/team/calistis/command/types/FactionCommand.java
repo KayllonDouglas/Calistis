@@ -5,8 +5,11 @@ import team.calistis.command.Command;
 
 public class FactionCommand extends Command {
 
-  public FactionCommand(String name, String description) {
-    super(name, description);
+  public FactionCommand() {
+    super("f",
+        "Default factions command",
+        "/f",
+        new String[] { "fac", "faction", "factions" });
   }
 
   @Override
