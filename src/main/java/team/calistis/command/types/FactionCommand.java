@@ -6,6 +6,8 @@ import lombok.extern.log4j.Log4j2;
 import team.calistis.api.API;
 import team.calistis.command.Command;
 
+import java.util.Map;
+
 @Log4j2
 public class FactionCommand extends Command {
 
@@ -19,17 +21,17 @@ public class FactionCommand extends Command {
   @Override
   public boolean execute(CommandSender sender, String label, String[] args) {
     if (!sender.isPlayer()) return false;
-    Player player = (Player) sender;
-    log.info("Abaixo do 'player'");
-    API.getFactionsMap().values().forEach(fc -> {
-      log.info("dentro do loop");
-      if (!fc.getMembers().containsKey(player.getUniqueId())) {
-        player.sendMessage("isn't in faction");
+    API.getFactionsMap().values().forEach(val -> {
+      if (val == null) {
+        ((Player)sender).sendMessage("no-factions");
         return;
       }
-      player.sendMessage("is in faction");
+      if (!val.getMembers().containsKey(((Player)sender).getUniqueId())) {
+        ((Player)sender).sendMessage("not in faction");
+        return;
+      }
+      ((Player)sender).sendMessage("in faction");
     });
-    log.info("fora do loop");
     return true;
   }
 
