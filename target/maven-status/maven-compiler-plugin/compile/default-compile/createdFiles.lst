@@ -1,11 +1,9 @@
-team/calistis/zcore/MenuUtils.class
 team/calistis/command/types/FactionCommand.class
-team/calistis/zcore/command/SubCommand.class
-team/calistis/zcore/command/CoreCommand.class
+team/calistis/command/SubCommand.class
 team/calistis/CoreListener.class
-team/calistis/api/faction/FactionMember.class
-team/calistis/api/faction/Faction.class
-team/calistis/api/faction/FactionRole.class
-team/calistis/command/types/subcommands/CreateFactionSubCommand.class
-team/calistis/command/CommandManager.class
+team/calistis/command/Command.class
+team/calistis/api/API.class
+team/calistis/faction/Faction.class
+team/calistis/faction/FactionMember.class
 team/calistis/Core.class
+team/calistis/faction/FactionRole.class

@@ -11,8 +11,9 @@ public class CoreListener implements Listener {
 
   @EventHandler
   public void onChatInput(PlayerChatEvent event) {
-    Consumer<PlayerChatEvent> consumer = API.getInputMap().get(event.getPlayer().getUniqueId());
-    if (consumer == null) return;
+    Consumer<PlayerChatEvent> consumer = API.getInputsMap().get(event.getPlayer().getUniqueId());
+    if (consumer == null)
+      return;
     consumer.accept(event);
   }
 
