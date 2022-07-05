@@ -1,22 +1,22 @@
 package team.calistis.api;
 
-import cn.nukkit.event.player.PlayerChatEvent;
-import team.calistis.faction.Faction;
-import team.calistis.player.CorePlayer;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-public class API {
+import cn.nukkit.event.player.PlayerChatEvent;
+import team.calistis.CorePlayer;
+import team.calistis.faction.Faction;
 
-  private static final Map<UUID, Consumer<PlayerChatEvent>> inputsMap = new HashMap<>();
-  private static final Map<UUID, CorePlayer> playersMap = new HashMap<>();
-  private static final Map<String, Faction> factionsMap = new HashMap<>();
+public class API {
+  
+  public static final Map<UUID, Consumer<PlayerChatEvent>> inputsMap = new HashMap<>();
+  public static final Map<UUID, CorePlayer> playersMap = new HashMap<>();
+  public static final Map<String, Faction> factionsMap = new HashMap<>();
 
   public static Map<UUID, Consumer<PlayerChatEvent>> getInputsMap() {
-    return inputsMap;
+      return inputsMap;
   }
 
   public static Map<UUID, CorePlayer> getPlayersMap() {

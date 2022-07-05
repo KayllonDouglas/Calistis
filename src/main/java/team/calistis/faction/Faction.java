@@ -3,13 +3,10 @@ package team.calistis.faction;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
 public class Faction {
-
-  private String tag,
-      description;
-
-  private int power;
+  
+  private String tag, description;
 
 }

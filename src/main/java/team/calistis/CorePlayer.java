@@ -1,20 +1,17 @@
-package team.calistis.player;
+package team.calistis;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import team.calistis.faction.Faction;
 import team.calistis.faction.FactionRole;
 
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
 public class CorePlayer {
+
+  private double money, cash;
 
   private Faction faction;
   private FactionRole factionRole;
-
-  private double money,
-      cash,
-      mobCoins,
-      shards;
 
 }
