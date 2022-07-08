@@ -5,15 +5,17 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+import cn.nukkit.event.inventory.InventoryTransactionEvent;
 import cn.nukkit.event.player.PlayerChatEvent;
 import cn.nukkit.event.player.PlayerInteractEvent;
 import team.calistis.CorePlayer;
 import team.calistis.faction.Faction;
 
-public class Awaiter {
+public class API {
   
   private static final Map<UUID, Consumer<PlayerChatEvent>> awaitingChatInputMap = new HashMap<>();
   private static final Map<UUID, Consumer<PlayerInteractEvent>> awaitingInteractMap = new HashMap<>();
+  private static final Map<UUID, Consumer<InventoryTransactionEvent>> awaitingTransactionMap = new HashMap<>();
 
   private static final Map<UUID, CorePlayer> playersMap = new HashMap<>();
   private static final Map<String, Faction> factionsMap = new HashMap<>();
@@ -24,6 +26,10 @@ public class Awaiter {
 
   public static Map<UUID, Consumer<PlayerInteractEvent>> getAwaitingInteractMap() {
       return awaitingInteractMap;
+  }
+
+  public static Map<UUID, Consumer<InventoryTransactionEvent>> getAwaitingtransactionMap() {
+      return awaitingTransactionMap;
   }
 
   public static Map<UUID, CorePlayer> getPlayersMap() {

@@ -11,7 +11,7 @@ import cn.nukkit.event.player.PlayerInteractEvent;
 import cn.nukkit.event.player.PlayerLocallyInitializedEvent;
 import cn.nukkit.event.player.PlayerPreLoginEvent;
 
-import team.calistis.api.Awaiter;
+import team.calistis.api.API;
 import team.calistis.tasks.player.OnPlayerJoinTask;
 
 public class CoreListener implements Listener {
@@ -19,8 +19,8 @@ public class CoreListener implements Listener {
   @EventHandler
   public void onPreLogin(PlayerPreLoginEvent event) {
     Player player = event.getPlayer();
-    if (!Awaiter.getPlayersMap().containsKey(player.getUniqueId())) {
-      Awaiter.getPlayersMap().put(player.getUniqueId(), new CorePlayer(0, 0, null, null));
+    if (!API.getPlayersMap().containsKey(player.getUniqueId())) {
+      API.getPlayersMap().put(player.getUniqueId(), new CorePlayer(0, 0, null, null));
       return;
     }
   }
@@ -41,7 +41,7 @@ public class CoreListener implements Listener {
   @EventHandler
   public void onPlayerInteract(PlayerInteractEvent event) {
     Player player = event.getPlayer();
-    Consumer<PlayerInteractEvent> consumer = Awaiter.getAwaitingInteractMap().get(player.getUniqueId());
+    Consumer<PlayerInteractEvent> consumer = API.getAwaitingInteractMap().get(player.getUniqueId());
     if (consumer == null)
       return;
     consumer.accept(event);
@@ -50,7 +50,7 @@ public class CoreListener implements Listener {
   @EventHandler
   public void onPlayerChat(PlayerChatEvent event) {
     Player player = event.getPlayer();
-    Consumer<PlayerChatEvent> consumer = Awaiter.getAwaitingChatInputMap().get(player.getUniqueId());
+    Consumer<PlayerChatEvent> consumer = API.getAwaitingChatInputMap().get(player.getUniqueId());
     if (consumer == null)
       return;
     consumer.accept(event);
