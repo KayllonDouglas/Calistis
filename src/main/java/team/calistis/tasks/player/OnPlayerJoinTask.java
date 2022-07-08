@@ -4,7 +4,7 @@ import cn.nukkit.Player;
 import cn.nukkit.network.protocol.LevelEventPacket;
 import cn.nukkit.scheduler.PluginTask;
 import team.calistis.Core;
-import team.calistis.api.API;
+import team.calistis.api.Awaiter;
 
 public class OnPlayerJoinTask extends PluginTask<Core> {
 
@@ -29,7 +29,7 @@ public class OnPlayerJoinTask extends PluginTask<Core> {
     this.player.sendTitle("§6§lCalistis§r",
         "§7Welcome §6" + this.player.getNameTag() + "§7, enjoy the gameplay!", 30, 30, 30);
 
-    if (API.getPlayersMap().get(player.getUniqueId()).getFaction() == null) {
+    if (Awaiter.getPlayersMap().get(player.getUniqueId()).getFaction() == null) {
       this.player.sendMessage(" §l§6»§r §7Heyo §6" + this.player.getNameTag()
           + "§7, it looks like you are not a faction leader and much less a member/recruit, start by creating yours or join one that is public.");
       return;

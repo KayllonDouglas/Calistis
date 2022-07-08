@@ -1,6 +1,7 @@
 package team.calistis;
 
 import lombok.extern.log4j.Log4j2;
+import team.calistis.command.types.FactionCommand;
 import team.calistis.zcore.Engine;
 
 @Log4j2
@@ -16,7 +17,11 @@ public class Core extends Engine {
   @Override
   public void onCoreEnable() {
     instance = this;
+
     this.getServer().getPluginManager().registerEvents(new CoreListener(), this);
+
+    this.getServer().getCommandMap().register("f", new FactionCommand());
+
     log.info("§7Plugin environment enabled, version [" + this.getDescription().getVersion() + "].");
   }
 

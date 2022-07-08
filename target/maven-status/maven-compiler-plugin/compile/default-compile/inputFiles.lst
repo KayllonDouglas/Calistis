@@ -1,10 +1,12 @@
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/zcore/Engine.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/faction/Faction.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/types/FactionCommand.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/Core.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/CoreListener.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/tasks/player/OnPlayerJoinTask.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/CorePlayer.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/api/API.java
+/data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/types/subcommands/CreateFactionSubCommand.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/Command.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/faction/FactionRole.java
 /data/data/com.termux/files/home/CalistisCore/src/main/java/team/calistis/command/SubCommand.java
