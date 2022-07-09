@@ -1,2 +1,2 @@
-# CalistisCore
-Core for Calistis Network
+# Calistis
+  Core for Calistis Network
