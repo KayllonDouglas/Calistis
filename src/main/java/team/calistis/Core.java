@@ -16,9 +16,6 @@ public class Core extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
-
-    this.getServer().getPluginManager().registerEvents(new CoreListener(this), this);
-
     log.info("§7Plugin environment enabled, version [" + this.getDescription().getVersion() + "].");
   }
 

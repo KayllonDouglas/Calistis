@@ -1,12 +1,9 @@
-team/calistis/CoreListener.class
-team/calistis/CorePlayer.class
-team/calistis/command/types/subcommands/CreateFactionSubCommand.class
-team/calistis/tasks/player/OnPlayerJoinTask.class
-team/calistis/Core.class
 team/calistis/command/types/FactionCommand.class
 team/calistis/command/SubCommand.class
 team/calistis/command/Command.class
-team/calistis/zcore/Engine.class
-team/calistis/api/API.class
 team/calistis/faction/Faction.class
+team/calistis/api/CoreAPI.class
+team/calistis/listener/CoreListener.class
+team/calistis/player/CorePlayer.class
+team/calistis/Core.class
 team/calistis/faction/FactionRole.class
