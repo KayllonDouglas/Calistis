@@ -8,5 +8,5 @@ import lombok.Data;
 public class Faction {
 
   private String tag, description;
-  
+
 }
