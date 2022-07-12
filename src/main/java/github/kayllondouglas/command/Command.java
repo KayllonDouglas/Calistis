@@ -1,4 +1,4 @@
-package team.calistis.command;
+package github.kayllondouglas.command;
 
 import cn.nukkit.command.CommandSender;
 import lombok.SneakyThrows;
