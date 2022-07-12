@@ -1,10 +1,6 @@
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/api/CoreAPI.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/Core.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/command/SubCommand.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/player/CorePlayer.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/command/subcommands/CreateFactionSubCommand.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/command/types/FactionCommand.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/faction/FactionRole.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/listener/CoreListener.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/command/Command.java
-/data/data/com.termux/files/home/Calistis/src/main/java/team/calistis/faction/Faction.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/Faction.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/Core.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/api/API.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/FactionRole.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/profile/Profile.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/CoreListener.java

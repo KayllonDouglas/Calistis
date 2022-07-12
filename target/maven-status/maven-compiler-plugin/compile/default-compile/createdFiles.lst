@@ -1,9 +1,6 @@
-team/calistis/command/types/FactionCommand.class
-team/calistis/command/SubCommand.class
-team/calistis/command/Command.class
-team/calistis/faction/Faction.class
-team/calistis/api/CoreAPI.class
-team/calistis/listener/CoreListener.class
-team/calistis/player/CorePlayer.class
-team/calistis/Core.class
-team/calistis/faction/FactionRole.class
+github/kayllondouglas/faction/FactionRole.class
+github/kayllondouglas/Core.class
+github/kayllondouglas/api/API.class
+github/kayllondouglas/faction/Faction.class
+github/kayllondouglas/CoreListener.class
+github/kayllondouglas/profile/Profile.class
