@@ -2,9 +2,9 @@ package github.kayllondouglas;
 
 import cn.nukkit.plugin.PluginBase;
 
-public class Core extends PluginBase {
+public class Calistis extends PluginBase {
 
-  public static Core instance;
+  public static Calistis instance;
 
   @Override
   public void onEnable() {
@@ -17,7 +17,7 @@ public class Core extends PluginBase {
     this.getLogger().info("§7Plugin environment disabled.");
   }
 
-  public static Core getInstance() {
+  public static Calistis getInstance() {
     return instance;
   }
 
