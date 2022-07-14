@@ -12,4 +12,6 @@ public class FactionPlayer {
   private Faction faction;
   private FactionRole factionRole;
 
+  private double money, cash, shards;
+
 }

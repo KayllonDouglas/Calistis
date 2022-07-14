@@ -2,7 +2,6 @@ package github.kayllondouglas;
 
 import cn.nukkit.plugin.PluginBase;
 
-
 public class Core extends PluginBase {
 
   private static Core instance;
@@ -12,14 +11,15 @@ public class Core extends PluginBase {
     instance = this;
 
     this.getServer()
-            .getPluginManager()
-            .registerEvents(new CoreListener(), this);
+        .getPluginManager()
+        .registerEvents(new CoreListener(), this);
 
+    this.getLogger().info("§aCalistis is now enabled.");
   }
 
   @Override
   public void onDisable() {
-
+    this.getLogger().info("§cCalistis is now disabled.");
   }
 
   public static Core getInstance() {

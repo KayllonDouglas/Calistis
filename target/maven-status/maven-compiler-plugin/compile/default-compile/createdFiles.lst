@@ -1,6 +1,7 @@
 github/kayllondouglas/faction/FactionRole.class
+github/kayllondouglas/CoreManager.class
 github/kayllondouglas/Core.class
-github/kayllondouglas/api/API.class
 github/kayllondouglas/faction/Faction.class
 github/kayllondouglas/CoreListener.class
-github/kayllondouglas/profile/Profile.class
+github/kayllondouglas/faction/player/FactionPlayer.class
+github/kayllondouglas/faction/FactionClaim.class

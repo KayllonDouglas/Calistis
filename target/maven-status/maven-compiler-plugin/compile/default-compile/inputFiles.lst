@@ -1,6 +1,7 @@
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/Faction.java
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/Core.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/api/API.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/CoreManager.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/player/FactionPlayer.java
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/FactionRole.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/profile/Profile.java
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/CoreListener.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/FactionClaim.java
