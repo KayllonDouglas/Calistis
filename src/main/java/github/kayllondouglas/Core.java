@@ -10,10 +10,6 @@ public class Core extends PluginBase {
   public void onEnable() {
     instance = this;
 
-    this.getServer()
-        .getPluginManager()
-        .registerEvents(new CoreListener(), this);
-
     this.getLogger().info("§aCalistis is now enabled.");
   }
 
