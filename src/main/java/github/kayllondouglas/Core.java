@@ -9,8 +9,7 @@ public class Core extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
-
-    this.getLogger().info("§aCalistis is now enabled.");
+    this.getLogger().info("§aCalistis is now enabled");
   }
 
   @Override
