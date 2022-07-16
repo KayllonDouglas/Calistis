@@ -1,4 +1,4 @@
-package github.kayllondouglas.clan.entity;
+package github.kayllondouglas.entity.clan;
 
 public enum ClanRole {
 

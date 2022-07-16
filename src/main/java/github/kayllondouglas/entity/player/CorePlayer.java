@@ -1,11 +1,9 @@
-package github.kayllondouglas.player.entity;
+package github.kayllondouglas.entity.player;
 
-import github.kayllondouglas.clan.entity.Clan;
-import github.kayllondouglas.clan.entity.ClanRole;
+import github.kayllondouglas.entity.clan.Clan;
+import github.kayllondouglas.entity.clan.ClanRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor

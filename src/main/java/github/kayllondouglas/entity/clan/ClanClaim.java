@@ -1,4 +1,4 @@
-package github.kayllondouglas.clan.entity;
+package github.kayllondouglas.entity.clan;
 
 import cn.nukkit.level.Level;
 import cn.nukkit.math.AxisAlignedBB;
