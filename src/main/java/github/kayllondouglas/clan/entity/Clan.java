@@ -1,4 +1,4 @@
-package github.kayllondouglas.clan;
+package github.kayllondouglas.clan.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Clan {
   
-  private String name, tag, description;
+  private String tag, description;
   private int power;
 
 }

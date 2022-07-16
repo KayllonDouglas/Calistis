@@ -1,18 +1,15 @@
-package github.kayllondouglas.player;
+package github.kayllondouglas.player.entity;
 
-import java.util.UUID;
-
-import github.kayllondouglas.clan.Clan;
-import github.kayllondouglas.clan.ClanRole;
-
+import github.kayllondouglas.clan.entity.Clan;
+import github.kayllondouglas.clan.entity.ClanRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 public class CorePlayer {
-
-  private UUID uuid;
 
   private double money, cash;
 
