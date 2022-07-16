@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.nukkit.command.CommandSender;
-import github.kayllondouglas.commands.exceptions.SubCommandRegistrationException;
+import github.kayllondouglas.commands.exceptions.SubCommandException;
 
 public class Command extends cn.nukkit.command.Command {
 
@@ -45,9 +45,9 @@ public class Command extends cn.nukkit.command.Command {
   }
 
   public SubCommand registerSubCommand(String subCommandName, SubCommand subCommand)
-      throws SubCommandRegistrationException {
+      throws SubCommandException {
     if (this.subCommands.containsKey(subCommandName))
-      throw new SubCommandRegistrationException(
+      throw new SubCommandException(
           String.format("The `%s` subCommand is already registered.", subCommandName));
     return this.subCommands.put(subCommandName, subCommand);
   }
