@@ -1,6 +1,7 @@
 package github.kayllondouglas.commands;
 
 import cn.nukkit.command.CommandSender;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

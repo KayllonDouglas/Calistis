@@ -10,12 +10,14 @@ public class Core extends PluginBase {
   public void onEnable() {
     instance = this;
 
-    this.getLogger().info("§aCalistis is now enabled.");
+    this.getLogger()
+        .info("§aCalistis is now enabled.");
   }
 
   @Override
   public void onDisable() {
-    this.getLogger().info("§cCalistis is now disabled.");
+    this.getLogger()
+        .info("§cCalistis is now disabled.");
   }
 
   public static Core getInstance() {
