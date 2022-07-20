@@ -1,7 +1,11 @@
-github/kayllondouglas/faction/FactionRole.class
-github/kayllondouglas/CoreManager.class
+github/kayllondouglas/session/SessionManager.class
+github/kayllondouglas/entity/clan/ClanClaim.class
+github/kayllondouglas/entity/clan/ClanRole.class
+github/kayllondouglas/session/Session.class
 github/kayllondouglas/Core.class
-github/kayllondouglas/faction/Faction.class
+github/kayllondouglas/commands/SubCommand.class
+github/kayllondouglas/entity/clan/Clan.class
+github/kayllondouglas/commands/Command.class
 github/kayllondouglas/CoreListener.class
-github/kayllondouglas/faction/player/FactionPlayer.class
-github/kayllondouglas/faction/FactionClaim.class
+github/kayllondouglas/commands/exceptions/SubCommandException.class
+github/kayllondouglas/session/SessionManager$1.class

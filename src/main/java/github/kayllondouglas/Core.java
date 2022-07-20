@@ -9,15 +9,21 @@ public class Core extends PluginBase {
   @Override
   public void onEnable() {
     instance = this;
+    this.getDataFolder().mkdirs();
+
+    this.getServer()
+        .getPluginManager()
+        .registerEvents(new CoreListener(), this);
 
     this.getLogger()
-            .info("§aCalistis is now enabled.");
+        .info("§aCalistis is now enabled.");
   }
 
   @Override
   public void onDisable() {
+
     this.getLogger()
-            .info("§cCalistis is now disabled.");
+        .info("§cCalistis is now disabled.");
   }
 
   public static Core getInstance() {

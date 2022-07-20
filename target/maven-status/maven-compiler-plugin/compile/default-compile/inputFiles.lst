@@ -1,7 +1,10 @@
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/Faction.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/entity/clan/ClanRole.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/commands/Command.java
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/Core.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/CoreManager.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/player/FactionPlayer.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/FactionRole.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/entity/clan/ClanClaim.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/session/SessionManager.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/commands/SubCommand.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/entity/clan/Clan.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/session/Session.java
+/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/commands/exceptions/SubCommandException.java
 /data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/CoreListener.java
-/data/data/com.termux/files/home/Calistis/src/main/java/github/kayllondouglas/faction/FactionClaim.java

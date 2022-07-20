@@ -6,7 +6,7 @@ import java.util.Map;
 import cn.nukkit.command.CommandSender;
 import github.kayllondouglas.commands.exceptions.SubCommandException;
 
-public class Command extends cn.nukkit.command.Command {
+public abstract class Command extends cn.nukkit.command.Command {
 
   private final Map<String, SubCommand> subCommands = new HashMap<>();
 
@@ -57,12 +57,10 @@ public class Command extends cn.nukkit.command.Command {
   }
 
   @Override
-  public boolean execute(
+  public abstract boolean execute(
       CommandSender commandSender,
       String commandLabel,
-      String[] arguments) {
-    return true;
-  }
+      String[] arguments);
 
   public Map<String, SubCommand> getSubCommands() {
     return subCommands;
